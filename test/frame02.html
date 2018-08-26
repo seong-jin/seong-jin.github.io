@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>form test2</title>
+<link rel="stylesheet" href="./css/normalize.css">
+<style>
+html,body {height:100%;}
+.wrap {height:100%; padding:10px; background-color:yellowgreen;}
+.formarea > .ui-input:first-child {margin-top:0;}
+.ui-input, .ui-select {margin-top:10px;}
+.ui-input:after, .ui-select:after {content:'';display:block;clear:both;}
+.ui-input > label,
+.ui-select > label {float:left; height:30px; line-height:30px; width:40%;}
+.ui-input > input,
+.ui-select > select {height:30px; line-height:30px; margin:0; padding:0 5px; box-sizing:border-box; width:50%; float:right; border:none; background:#fff;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="formarea">
+	<div class="ui-input">
+		<label for="ipt-txt">input[type=text]</label>
+		<input type="text" id="ipt-txt">
+	</div>
+	<div class="ui-input">
+		<label for="ipt-tel">input[type=tel]</label>
+		<input type="tel" id="ipt-tel">
+	</div>
+	<div class="ui-input">
+		<label for="ipt-email">input[type=email]</label>
+		<input type="email" id="ipt-email">
+	</div>
+	<div class="ui-select">
+		<label for="slc01">select 01</label>
+		<select name="" id="slc01">
+			<option value="">option 001</option>
+			<option value="">option 002</option>
+			<option value="">option 003</option>
+			<option value="">option 004</option>
+			<option value="">option 005</option>
+			<option value="">option 006</option>
+			<option value="">option 007</option>
+			<option value="">option 008</option>
+			<option value="">option 009</option>
+			<option value="">option 010</option>
+		</select>
+	</div>
+</div>
+
+</div>
+</body>
+</html>
