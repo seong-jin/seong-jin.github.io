@@ -9,8 +9,10 @@
 <style>
 .wrap {padding:10px; background-color:#fff;}
 .formarea > .ui-input:first-child {margin-top:0;}
+.formarea label {display:inline-block; height:30px; line-height:30px; width:40%;}
 .ui-input, .ui-select {margin-top:10px;}
-input,select {height:30px; line-height:30px; margin:0; padding:0; box-sizing:border-box; width:50%;}
+input,select {height:30px; line-height:30px; margin:0; padding:0 10px; box-sizing:border-box; width:50%;}
+
 </style>
 </head>
 <body>
@@ -19,16 +21,20 @@ input,select {height:30px; line-height:30px; margin:0; padding:0; box-sizing:bor
 <div class="formarea">
 
 	<div class="ui-input">
-		<input type="text">
+		<label for="ipt-txt">input[type=text]</label>
+		<input type="text" id="ipt-txt">
 	</div>
 	<div class="ui-input">
-		<input type="tel">
+		<label for="ipt-tel">input[type=tel]</label>
+		<input type="tel" id="ipt-tel">
 	</div>
 	<div class="ui-input">
-		<input type="email">
+		<label for="ipt-email">input[type=email]</label>
+		<input type="email" id="ipt-email">
 	</div>
 	<div class="ui-select">
-		<select name="" id="">
+		<label for="slc01">select 01</label>
+		<select name="" id="slc01">
 			<option value="">option 001</option>
 			<option value="">option 002</option>
 			<option value="">option 003</option>
