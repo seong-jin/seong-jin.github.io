@@ -7,19 +7,20 @@
 <title>form test</title>
 <link rel="stylesheet" href="./css/normalize.css">
 <style>
-.wrap {padding:10px; background-color:#fff;}
+.wrap {padding:10px; background-color:yellowgreen;}
 .formarea > .ui-input:first-child {margin-top:0;}
-.formarea label {display:inline-block; height:30px; line-height:30px; width:40%;}
 .ui-input, .ui-select {margin-top:10px;}
-input,select {height:30px; line-height:30px; margin:0; padding:0 10px; box-sizing:border-box; width:50%;}
-
+.ui-input:after, .ui-select:after {content:'';display:block;clear:both;}
+.ui-input > label,
+.ui-select > label {float:left; height:30px; line-height:30px; width:40%;}
+.ui-input > input,
+.ui-select > select {height:30px; line-height:30px; margin:0; padding:0 5px; box-sizing:border-box; width:50%; float:right;}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <div class="formarea">
-
 	<div class="ui-input">
 		<label for="ipt-txt">input[type=text]</label>
 		<input type="text" id="ipt-txt">
