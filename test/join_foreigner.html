@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link type="text/css" rel="stylesheet" href="/WebContent/inc/new/css/layout_easy.css">
+	<link type="text/css" rel="stylesheet" href="/WebContent/inc/new/css/information_easy.css">
+	<link type="text/css" rel="stylesheet" href="/WebContent/inc/new/css/cert_easy.css">
+	<link type="text/css" rel="stylesheet" href="/WebContent/inc/new/css/popup.css">
+	<link type="text/css" rel="stylesheet" href="/WebContent/inc/new/css/main.css">
+	<script type="text/javascript" src="/WebContent/js/jquery/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="/WebContent/js/eiwaf/eiwaf-1.0.0.js"></script>
+	<script type="text/javascript" src="/WebContent/js/util.comn.js" charset="utf-8"></script>
+	<script type="text/javascript" src="/WebContent/js/ls.comn.js"></script>
+	<script type="text/javascript" src="/WebContent/js/util.biz.js"></script>
+	<script type="text/javascript" src="/WebContent/inc/new/js/ui-trigger.js"></script>
+	<script type="text/javascript" src="/WebContent/inc/new/js/content-popup.js?v=20180315"></script>
+	<script type="text/javascript" src="/WebContent/inc/new/js/content-resize.js"></script>
+	<!--[if lt IE 9]>
+	<link type="text/css" rel="stylesheet" href="/WebContent/inc/new/css/reset-ie8fix.css">
+	<script src="/WebContent/inc/new/js/happybrowser.js"></script>
+	<script src="/WebContent/inc/new/js/IE9.js"></script>
+	<script src="/WebContent/inc/new/js/html5shiv.js"></script>
+	<![endif]-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-59563316-14"></script>
+	<script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+       gtag('config', 'UA-59563316-14', {'send_page_view': false});
+                                                                 
+       <!-- Google Tag Manager -->
+       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+       })(window,document,'script','dataLayer','GTM-MBK9MVW');
+       <!-- End Google Tag Manager -->
+</script>
+	<script type="text/javascript">
+	//<![CDATA[
+		var gvCurrDate = new Date(1536140322450);
+		var gvDefaultUrl = "/app/member/LSMA100100.do";
+		var gvPageTitle = "";
+		$(function() {
+			eiwaf_InitDocumentReady({"code":0,"msgCode":"STATUS.Ok","message":"정상 처리되었습니다."});
+		});
+		
+/* 		function fnDoLotteFamilySiteGo(){
+			var url = $( "select[name=familyUrl]" ).val(); 
+			svcf_Link( url, "", "_blank", "" );
+		} */
+
+		function goSite() {
+			var strSid = 'MEMBERSMBL';
+			var strReturnUrlFromInc = "";
+			var strSchema = 'MEMBERSMCWEB';
+			var strHomeUrlFromInc = 'https://m.lpoint.com';
+			var strOpenType = 'P';
+			var tempAgent = navigator.userAgent.toLowerCase();
+			
+			if( ( "" != strReturnUrlFromInc && strReturnUrlFromInc != null ) && "CINEMAMAPP" != strSid ){
+				location.href = urlChk(strReturnUrlFromInc);
+			}else{ 
+				if( "MEMBERSMCWEB" != strSchema && "CINEMAMAPP" != strSid ){
+	                if( ( tempAgent.indexOf( "iphone" ) > 0 ) || ( tempAgent.indexOf( "ipad" ) > 0 ) ){
+	                    if( strSchema.indexOf( "://" ) < 0 ){
+	                            location.href = strSchema+"://";
+	                    }else{
+	                            location.href = strSchema;
+	                    }
+		            }else{
+	                    var iFrame = document.createElement('iframe');
+	                    iFrame.style.display = 'none';
+	                    if( strSchema.indexOf( "://" ) < 0 ){
+	                            iFrame.src = strSchema+"://";
+	                    }else{
+	                            iFrame.src = strSchema;
+	                    }
+	                    document.body.appendChild(iFrame);
+	                    setTimeout(function(){document.body.removeChild(iFrame);},100);
+		            }
+				}else if( "CINEMAMAPP" == strSid ){				
+	                if( strReturnUrlFromInc.indexOf( "://" ) < 0 ){
+	                    location.href = strReturnUrlFromInc+"://";
+		            }else{
+		                location.href = strReturnUrlFromInc;
+		            }
+				}else{
+					location.href = urlChk(strHomeUrlFromInc);
+				}
+			}
+			if( "P" == strOpenType ){
+				uif_SelfClose();
+			}
+		}
+		
+		function fnPageMov(){
+			alert("1111");
+		}
+		
+	//]]>
+	</script>
+</head>
+<body class="pinned">
+	<!-- mast head start --> 
+	<div id="mast-head">
+		<div class="container __wide-easy">
+			<h1 class="title show" id="mastHeadTitle">
+			</h1>
+		</div>
+	</div>
+	<!-- mast head end -->
+	<div id="mast-body">
+		
+<script type="text/javascript">
+//<![CDATA[
+	function fnOpenLPop(obj) {
+		switch(obj.id){
+			case 'langSelBtn':		
+				$(".language, .layerpop .dim90").show();
+				$("body").bind("touchmove", function(e){e.preventDefault();});
+				break;
+			case 'langClsBtn':		//닫기
+				$(".language, .layerpop .dim90").hide();				
+				break;
+		}
+   	}
+           
+    function fnGo_LSMA200100() 
+	{
+		var f = document.form1;
+		svcf_Submit( f, '/app/member/LSMA200100.do?mobYn=Y');
+	}
+	
+	function fnGoFrnPage( loc ) 
+	{
+		var f = document.form1;
+		
+		var goUrl = "";
+		if('Y' == 'Y'){
+			if( loc == "eng")
+			{
+				goUrl = "/app/member/LSMA500100.do";	
+			}
+			else if( loc == "chn")
+			{
+				goUrl = "/app/member/LSMA500200.do";
+			}
+			else if( loc == "jpn")
+			{
+				goUrl = "/app/member/LSMA500300.do";
+			}
+		} else {
+			if( loc == "eng")
+			{
+				goUrl = "/app/member/LSMA300100.do";	
+			}
+			else if( loc == "chn")
+			{
+				goUrl = "/app/member/LSMA300200.do";
+			}
+			else if( loc == "jpn")
+			{
+				goUrl = "/app/member/LSMA300300.do";
+			}
+		}
+		
+		svcf_Submit( f, goUrl );
+	}
+   
+	function fnGo_LSMA600101(){
+		var f = document.form1;
+		if('Y' == 'Y'){
+			svcf_Submit( f, "/app/member/LSMA700100.do" );
+		} else {
+			svcf_Submit( f, "/app/member/LSMA600100.do" );
+		}
+	}
+	
+	//휴대폰/아이핀 인증 후 callBack 함수 
+	function fnCheckCertCallback( result )
+	{
+		var f = document.form1;
+		if( result.getValue( "successYn" ) != "Y" ){
+			alert( "본인확인에 실패했습니다." );
+			return;
+		}
+		
+		// 검증용 요청 인증키
+		f.requestCertKey.value =  result.getValue( "requestCertKey" );			
+		svcf_Ajax( "/app/member/LSMA100102.do", f, {
+		    callbackFn: fnInsertCertCallback
+		}); 
+	}	
+	
+	function fnInsertCertCallback()
+	{
+		var f = document.form1;
+		
+		if('Y' == 'Y'){
+			svcf_Submit( f, "/app/member/LSMA190603.do" );
+		} else {
+			svcf_Submit( f, "/app/member/LSMA190103.do" );
+		}
+	}
+	
+//]]>
+</script>
+<form name="form1" FormEvent="true">		
+	<input type="hidden" name="requestCertKey" />
+	<input type="hidden" name="CertGb" />
+	<!-- 	URL Parameter -->
+	<input type="hidden" name="sid" value="MEMBERSMBL" />
+	<input type="hidden" name="sch" value="MEMBERSMCWEB" />
+	<input type="hidden" name="returnurl" value="" />
+	<input type="hidden" name="mallcode" value="510" />
+	<input type="hidden" name="opentype" value="P" />
+	<input type="hidden" name="recomm_id" value="" />
+	<input type="hidden" name="custType" value="" />							
+	
+	<input type="hidden" name="copToken" value=""/>			
+	<input type="hidden" name="copCls" value=""/>			
+	
+	
+	<input type="hidden" name="easy" value="Y"/>
+	<input type="hidden" name="CommandToken" value="4bb3d693ee6dea4f767b815bdd7a3f2" />
+<div id="mast-body">
+	<div class="container __wide-easy">
+    	<h2 class="title __low">회원가입</h2>
+    		<div class="headline">순식간에<br/>가입하는<br/>L.POINT :)</div>
+    			<div class="inform-trigger">
+    				<button type="button" data-title="<em class='__blue'>L.POINT</em><br>회원가입 안내" data-target="#about-lpoint" onclick="modal_init('modal-about-lpoint', '800')">L.POINT 안내</button>
+    			</div>
+    			<div id="modal-about-lpoint" class="modal-container">
+      				<div class="modal-header">
+        				<div class="headline">
+        					<em class="__blue">L.POINT</em><br>회원가입 안내
+        				</div>
+      				</div>
+      				<div class="modal-contents">
+          				<div class="inform">
+					                어디에서나 사용하기 편한 포인트!<br>
+					                롯데그룹과 기타 제휴사의 오프라인은 물론, 모바일&amp;온라인에서도 간단한 비밀번호로 포인트 사용이 가능합니다.<br><br>
+              				<em class="__blue">회원가입은 한번만!</em><br><br>
+              				L.POINT 제휴사의 온라인 모바일에서 하나의 ID로 로그인이 가능합니다.
+            			</div>
+            			<br>
+	           	 		<div class="inform-list">
+	            			<div class="subject">알려드립니다.</div>
+			              	<ol>
+			                	<li>1. L.POINT 제휴사이트에서 회원가입을 하시거나, 제휴 매장에서 포인트 카드를 발급받으시면 L.POINT 서비스 이용이 가능합니다.</li>
+			                	<li>2. L.POINT 이용의 적립/사용에 대한 승인 및 정산을 위해서, 고객님께서 포인트 적립/사용한 L.POINT 제휴사에서만 고객님 정보가 제공됩니다.</li>
+			                	<li>3. 고객님이 회원가입시 동의하신 경우에만, L.POINT 제휴사의 마케팅 활동을 위해 L.POINT 제휴사에 고객님의 정보가 제공됩니다.</li>
+			                	<li>4. 본인확인 수단이 없으신 경우, '개인 회원가입'에서 간편회원으로 가입할 수 있습니다.</li>
+			                	<li>5. 간편회원으로 가입하신 경우, L.POINT 제휴사별 사이트 이용 정책에 따라 혜택이 다를 수 있습니다.</li>
+			              	</ol>
+	          			</div>
+      				</div>
+			      	<div class="modal-closer">
+			        	<button type="button" class="btn-close" onclick="$(this).parents('.modal-container').removeClass('active'); $('.modal-dimmed').remove();">닫기</button>
+			      	</div>
+    			</div>
+    			<div class="section">
+			      	<div id="section-certify-way" class="row">
+				        <div class="col-md">
+				          	<ul class="item-wrap">
+				            	<li><a href="#" class="item certify-hp" onclick="lsf_CertCall('H', 'REGIST', '1100|MEMBERSMBL','','SS','20'); return false;"><span>휴대폰 인증</span></a></li>
+              					<li><a href="#" class="item certify-ipin" onclick="lsf_CertCall('I', 'REGIST', '1100|MEMBERSMBL'); return false;"><span>아이핀 인증</span></a></li>
+				            	<!-- <li><a href="#" class="item certify-document"><span>공인인증서 인증</span></a></li>
+				            	<li><a href="#" class="item certify-card"><span>신용카드 인증</span></a></li> -->
+				          	</ul>
+				          	
+					          	<ul class="item-wrap">
+					            	<li><a href="#" class="item certify-email" onclick="fnGo_LSMA600101();return false"><span>이메일 인증</span></a></li>
+					            	<li><p class="description2">이메일 인증을 통해 간편회원으로 가입 시 회원혜택이 제한됩니다.</p></li>
+					          	</ul>
+				          	
+				        </div>
+						
+					       	<div class="col-md __low">
+					          	<div class="btn-wrap">
+					          		
+					            		<a class="ui-button __square-minilong __blue" href="" onclick="fnGo_LSMA200100();return false">법인</a>
+					            	
+					            	
+					            		<!-- <a class="ui-button __square-minilong __blue __arrow" href="" onclick="fnGoFrnPage('eng');return false">Foreigner</a> -->
+					            		<a class="ui-button __square-minilong __blue __arrow btn_language" href="#" id="langSelBtn" onclick="fnOpenLPop(this); return false;">Foreigner</a>
+					            	
+					          	</div>
+					        </div>
+			        	
+				        <div class="col-md">
+				          	<div class="description">
+				            	<p>아동(만 14세 미만)은 본인인증 후 부모님(법정대리인)동의가 필요합니다. </p>
+				            	<p>법인 명의 휴대폰 사용자는 통신사 지점 또는 대리점에 방문하여 법인명의 실사용자 등록 후 휴대폰 인증이 가능합니다.</p>
+				          	</div>
+				        </div>
+			      	</div>
+    			</div>
+	</div>
+</div>
+<!-- language 161226 추가 -->
+<div class="layerpop">
+	<div class="lpop language" style="display:none">
+		<div class="contents">
+ 			<ul>
+ 				<li><a href="#" onclick="fnGoFrnPage('eng');return false;" title="English">English</a></li>
+ 				<li><a href="#" onclick="fnGoFrnPage('chn');return false;" title="汉语">汉语</a></li>
+ 				<li><a href="#" onclick="fnGoFrnPage('jpn');return false;" title="日本語">日本語</a></li>
+ 			</ul>
+		</div>
+ 		<div class="btn_bx">
+			<a href="#" class="btn_cancel" title="취소" id="langClsBtn" onclick="fnOpenLPop(this); return false;">취소</a>
+ 		</div>
+ 	</div>
+	<!-- //language 161226 추가 -->
+ 	<div class="lpop dim90" style="display:none"></div>
+</div>
+</form>
+
+	</div>
+	<!-- mast foot start -->
+	<div id="mast-foot">
+	   <div class="container __wide-easy">
+	      <div class="utility">
+	      	<!-- Modified by K(2018.01.03) -->
+	        <div class="item"><a href="#" onclick="svcf_Link('http://www.lottemembers.com','','');return false;">회사소개</a></div>
+	        <div class="item"><a href="#" onclick="svcf_Link('https://www.lpoint.com/view/interface/link.jsp?reUrl=/app/center/LHDA100100.do','','');return false;" >고객센터</a></div>
+	        <div class="item"><a href="#" onclick="svcf_Link('https://www.lpoint.com/view/interface/link.jsp?reUrl=/app/center/LHDE100100.do','','');return false;" >이용약관</a></div>
+	        <div class="item"><a href="#" onclick="svcf_Link('https://www.lpoint.com/view/interface/link.jsp?reUrl=/app/common/LHZZ300500.do','','');return false;" >제휴안내</a></div>
+	        <div class="item"><a href="#" onclick="svcf_Link('https://www.lpoint.com/view/interface/link.jsp?reUrl=/app/center/LHDC100100.do','','');return false;" ><em class="__blue">개인정보처리방침</em></a></div>
+	        <div class="item"><a href="#" onclick="svcf_Link('https://partners.lpoint.com/lg/OWLG100100.do','','');return false;" >L.POINT 파트너스</a></div>
+	      </div>
+	      <div class="utility2 __only-easy">
+        	<span><div class="item"><a href="#">이용약관</a></div></span>
+        	<span>고객센터 1899-8900</span>
+	      </div>
+	      <div class="com-address __only-easy">
+	        <address>
+	          <span>서울시 중구 통일로 2길 16 AIA타워 14층</span>
+	          <span>회사명 롯데멤버스(주)</span>
+	          <span>대표이사 강승하</span>
+	          <span>사업자등록번호 104-86-58491</span>
+	          <span>고객센터 1899-8900</span>
+	        </address>
+	      </div>
+	      <div class="copyright">
+	         &copy; LOTTE MEMBERS CO.,LTD.
+	      </div>
+	      <div class="award __blind-easy">
+	        <div class="item"><img src="/WebContent/images/award/award-16-kdesign.png" alt="K-DESIGN AWARD 16"></div>
+	        <div class="item"><img src="/WebContent/images/award/award-16-gd.png" alt="Good Design Finalist"></div>
+	        <div class="item"><img src="/WebContent/images/award/award-16-starbrand.png" alt="Star Brand"></div>
+	        <div class="item"><img src="/WebContent/images/award/award-17-recommend.png" alt="2017 가장 추천하고 싶은 100대 어플"></div>
+	      </div>
+	      <div class="friendly">
+	        <div class="site-linker">
+	          <button type="button" role="button" class="">Service Site</button>
+	          <ul>
+	            <li><a target="_blank" href="https://www.lpoint.com">L.POINT</a></li>
+	            <li><a target="_blank" href="https://www.lpay.com">L.pay</a></li>
+	            <li><a target="_blank" href="https://www.lime-in.co.kr">라임</a></li>
+	            <li><a target="_blank" href="https://partners.lpoint.com">L.POINT 파트너스</a></li>
+	          </ul>
+	        </div>
+	        <div class="site-linker">
+	          <button type="button" role="button">Family Site</button>
+	          <ul>
+	            <li><a target="_blank" href="http://www.lotte.co.kr">롯데그룹</a></li>
+	            <li><a target="_blank" href="http://www.lottetown.com">롯데타운</a></li>
+	            <li><a target="_blank" href="http://www.lotte.com/">롯데닷컴</a></li>
+	            <li><a target="_blank" href="http://www.lottemart.com/">롯데마트</a></li>
+	            <li><a target="_blank" href="http://www.vic-market.com/vicmarket/main.do">롯데빅마켓</a></li>
+	            <li><a target="_blank" href="http://www.toysrus.co.kr/to/main.do">토이저러스</a></li>
+	            <li><a target="_blank" href="http://www.lottesuper.co.kr/">롯데슈퍼</a></li>
+	            <li><a target="_blank" href="http://www.lotteimall.com/main/Index.jsp">롯데홈쇼핑</a></li>
+	            <li><a target="_blank" href="http://www.7-eleven.co.kr/">바이더웨이</a></li>
+	            <li><a target="_blank" href="http://www.7-eleven.co.kr/">세븐일레븐</a></li>
+	            <li><a target="_blank" href="http://www.himart.co.kr/">하이마트</a></li>
+	            <li><a target="_blank" href="http://www.fujifilm.co.kr/">한국후지필름</a></li>
+	            <li><a target="_blank" href="http://www.lohbs.co.kr/main.do">LOHB's</a></li>
+	            <li><a target="_blank" href="http://www.ellotte.com/">롯데백화점</a></li>
+	            <li><a target="_blank" href="http://kr.lottedfs.com/main">롯데면세점</a></li>
+	            <li><a target="_blank" href="http://www.lottefitin.com">롯데피트인</a></li>
+	            <li><a target="_blank" href="http://gimpoairport.lottemall.co.kr">롯데몰 김포공항점</a></li>
+	            <li><a target="_blank" href="http://www.lwt.co.kr">롯데월드몰</a></li>
+	            <li><a target="_blank" href="http://store.lotteshopping.com/handler/Main-Start?subBrchCd=021&amp;gubun=2">롯데영플라자</a>w</li>
+	            <li><a target="_blank" href="http://store.lotteshopping.com/handler/Main-Start?subBrchCd=057">롯데아울렛</a></li>
+	            <li><a target="_blank" href="http://store.lotteshopping.com/handler/Main-Start?subBrchCd=054&amp;gubun=1">롯데프리미엄아울렛</a></li>
+	            <li><a target="_blank" href="http://www.mujikorea.net/">무인양품</a></li>
+	            <li><a target="_blank" href="http://www.uniqlo.kr/">유니클로</a></li>
+	            <li><a target="_blank" href="http://www.lotteria.com/">롯데리아</a></li>
+	            <li><a target="_blank" href="http://www.angelinus.co.kr/">엔제리너스커피</a></li>
+	            <li><a target="_blank" href="http://www.tgif.co.kr/">T.G.I FRIDAY'S</a></li>
+	            <li><a target="_blank" href="http://www.natuur.co.kr/">나뚜루POP</a></li>
+	            <li><a target="_blank" href="http://www.krispykreme.co.kr/">크리스피크림도넛</a></li>
+	            <li><a target="_blank" href="http://www.boulangerie.co.kr/">보네스뻬</a></li>
+	            <li><a target="_blank" href="http://www.lottecinema.co.kr/">롯데시네마</a></li>
+	            <li><a target="_blank" href="http://www.lotteworld.com/">롯데월드 어드벤처</a></li>
+	            <li><a target="_blank" href="http://www.lotteworld.com/aquarium/index.asp">롯데월드 아쿠아리움</a></li>
+	            <li><a target="_blank" href="http://www.lotteworld.com/waterpark/index.asp">롯데 워터파크</a></li>
+	            <li><a target="_blank" href="http://www.giantsclub.com/">롯데자이언츠</a></li>
+	            <li><a target="_blank" href="http://www.lottejtb.com/">롯데제이티비</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+    </div>
+	<!-- mast foot end -->
+</body>
+</html>
