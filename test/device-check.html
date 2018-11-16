@@ -7,37 +7,35 @@
 </head>
 <body>
 <div class="wrapper">
-<h1>Device Check</h1>
-<section class="sec">
-	<h2>User Agent</h2>
-	<p id="desc-ua"></p>
-</section>
-
-<section class="sec">
-	<h2></h2>
-	<p id="desc-vp">Viewport</p>
-</section>
-
-
+	<h1>Device Check</h1>
+	
+	<section class="sec">
+		<h2>User Agent</h2>
+		<p id="desc-ua"></p>
+	</section>
+	
+	<section class="sec">
+		<h2>Viewport</h2>
+		<p id="desc-vp"></p>
+	</section>
 </div>
 <script>
-var ua = window.navigator.userAgent.toLowerCase();
-
-document.getElementById('desc-ua').textContent = ua;
-
-viewPortCheck();
-
-window.onrezise = function(){
+	var ua = window.navigator.userAgent.toLowerCase();
+	document.getElementById('desc-ua').textContent = ua;
+	
 	viewPortCheck();
-}
+	window.onrezise = function(){
+		viewPortCheck();
+	}
 
-function viewPortCheck(){
-	var el = document.getElementById('desc-vp'),
-		vw = document.documentElement.clientWidth,
-		vh = document.documentElement.clientHeight,
-		vaTxt = 'width:'+vw+'px / height:'+vh+'px';
-	el.textContent = vaTxt;
-}
+	function viewPortCheck(){
+		var el = document.getElementById('desc-vp'),
+			vw = document.documentElement.clientWidth,
+			vh = document.documentElement.clientHeight,
+			vaTxt = 'width:'+vw+'px / height:'+vh+'px';
+		
+		el.textContent = vaTxt;
+	}
 </script>
 </body>
-</html		>
+</html>
