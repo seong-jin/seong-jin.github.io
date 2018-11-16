@@ -16,7 +16,21 @@
 <script>
 var ua = window.navigator.userAgent.toLowerCase();
 
-document.getElementById('desc-ua').innerHTML = ua
+document.getElementById('desc-ua').textContent = ua;
+
+viewPortCheck();
+
+window.onrezise = function(){
+	viewPortCheck();
+}
+
+function viewPortCheck(){
+	var el = document.getElementById('desc-vp'),
+		vw = document.documentElement.clientWidth,
+		vh = document.documentElement.clientHeight,
+		vaTxt = 'width:'+vw+'px / height:'+vh+'px';
+	el.textContent = vaTxt;
+}
 </script>
 </body>
-</html>
+</html		>
