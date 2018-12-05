@@ -181,7 +181,7 @@ function selectDateCheck(){
 		selectedDay.options.length = 0;	// option 목록 초기화
 		selectedDay.options[0] = new Option(defaultTxt, defaultVal);
 		for(var i=1; i<=lastDay; i++){
-			selectedDay.options[i] = noew Option(i, i);
+			selectedDay.options[i] = new Option(i, i);
 		}
 		
 		// 선택한 날과 그 달의 마지막 날 비교
