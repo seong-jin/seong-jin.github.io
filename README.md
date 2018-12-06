@@ -9,7 +9,7 @@
 * <a href="./test/index3.html" target="_blank">./test/index3.html</a> : 60% 높이 설정, iframe 내부 컨텐츠 높이 100% 설정.
 
 <br><br><br>
-## 2. TEST
+## 2. javascript Test
 * <a href="./test/device-check.html" target="_blank">UserAgent &amp; Viewport Size Check</a>
 * <!-- a href="./test/test-check-date.html" target="_blank" -->(작업중) 년월일 selectbox 윤달 처리
 
