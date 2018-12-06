@@ -11,7 +11,7 @@
 <br><br><br>
 ## 2. javascript Test
 * <a href="./test/device-check.html" target="_blank">UserAgent &amp; Viewport Size Check</a>
-* <!-- a href="./test/test-check-date.html" target="_blank" -->(작업중) 년월일 selectbox 윤달 처리
+* <a href="./test/test-check-date.html" target="_blank">(작업중) 년월일 selectbox 윤달 처리'</a>
 
 <br><br><br>
 ## 참고
