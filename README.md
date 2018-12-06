@@ -10,8 +10,8 @@
 
 <br><br><br>
 ## 2. TEST
-* <a href="./test/device-check.html" target="_blank">./test/device-check.html</a> : UserAgent & Viewport Size Check
-* <a href="./test/test-check-date.html" target="_blank">./test/test-check-date.html</a> : 년월일 selectbox 윤달 처리
+* <a href="./test/device-check.html" target="_blank">UserAgent &amp; Viewport Size Check</a>
+* <a -href="./test/test-check-date.html" target="_blank">(작업중) 년월일 selectbox 윤달 처리</a>
 
 <br><br><br>
 ## 참고
