@@ -102,7 +102,7 @@ function selectDateCheck(){
 	// (1) data-tearm : 년도 기간 설정
 	// (2) data-point : 년도 시점 설정
 	for(var i=0; i < _wrap.length; i++){
-		var startYearm,
+		var startYear,
 			endYear,
 			setTerm = _wrap[i].getAttribute('data-term') *1,
 			setPoint = _wrap[i].getAttribute('data-point'),
@@ -128,7 +128,7 @@ function selectDateCheck(){
 		
 		for(var j=startYear; j>=endYear; j--){
 			num++;
-			_year[i].options[num] = new Option(i, j);
+			_year[i].options[num] = new Option(j, j);
 		}
 	}
 		
@@ -136,15 +136,15 @@ function selectDateCheck(){
 	for(var i=0; i<_wrap.length; i++){
 		_month[i].options[0] = new Option(_month[i].getAttribute('data-default-option'), 'default');
 		for(var j=1; j<=12; j++){
-			_month[i].options[i] = new Option(i, j);
+			_month[i].options[j] = new Option(j, j);
 		}
 	}
 	
 	// 초기 일 절정
 	for(var i=0; i<_wrap.length; i++){
 		_day[i].options[0] = new Option(_day[i].getAttribute('data-default-option'), 'default');
-		for(var j=1; j<=12; j++){
-			_day[i].options[i] = new Option(i, j);
+		for(var j=1; j<=31; j++){
+			_day[i].options[j] = new Option(j, j);
 		}
 	}
 	
