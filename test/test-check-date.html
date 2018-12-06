@@ -102,7 +102,7 @@ function selectDateCheck(){
 	// (1) data-tearm : 년도 기간 설정
 	// (2) data-point : 년도 시점 설정
 	for(var i=0; i < _wrap.length; i++){
-		var startYearm
+		var startYearm,
 			endYear,
 			setTerm = _wrap[i].getAttribute('data-term') *1,
 			setPoint = _wrap[i].getAttribute('data-point'),
@@ -165,9 +165,9 @@ function selectDateCheck(){
 		var arrDay=[31,28,31,30,31,30,31,31,30,31,30,31],
 			lastDay,
 			wrap = this.parentNode,
-			yearVal = wrap.querySelector('sleect[data-unit=y]').value,
-			monthVal = wrap.querySelector('sleect[data-unit=m]').value,
-			selectedDay = wrap.querySelector('sleect[data-unit=d]'),
+			yearVal = wrap.querySelector('select[data-unit=y]').value,
+			monthVal = wrap.querySelector('select[data-unit=m]').value,
+			selectedDay = wrap.querySelector('select[data-unit=d]'),
 			dayVal = selectedDay.value,
 			defaultTxt = selectedDay.getAttribute('data-default-option'),
 			defaultVal = 'default';	// 'default' || ''
